@@ -1,0 +1,2144 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link data-mgx-overview="icon" rel="icon"
+        href="https://public-frontend-1300249583.cos.ap-nanjing.myqcloud.com/commonfile/DefaultAppLogo.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-mgx-overview="title">BahasaBot</title>
+    <meta data-mgx-overview="description" name="description"
+        content="Asisten percakapan yang membantu Anda berkomunikasi dalam Bahasa Indonesia.">
+    <meta name="author" content="Atoms">
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta data-mgx-overview="og:title" property="og:title" content="BahasaBot">
+    <meta data-mgx-overview="og:description" property="og:description"
+        content="Asisten percakapan yang membantu Anda berkomunikasi dalam Bahasa Indonesia.">
+    <meta data-mgx-overview="og:image" property="og:image"
+        content="https://public-frontend-1300249583.cos.ap-nanjing.myqcloud.com/commonfile/DefaultAppLogo.png">
+    <meta property="og:type" content="website">
+
+    <meta data-mgx-overview="twitter:title" name="twitter:title" content="BahasaBot">
+    <meta data-mgx-overview="twitter:description" name="twitter:description"
+        content="Asisten percakapan yang membantu Anda berkomunikasi dalam Bahasa Indonesia.">
+    <meta data-mgx-overview="twitter:image" name="twitter:image"
+        content="https://public-frontend-1300249583.cos.ap-nanjing.myqcloud.com/commonfile/DefaultAppLogo.png">
+    <script type="module" crossorigin="" src="/assets/index-BMwxTpyH.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/ui-vendor-D-rw7Yph.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/utils-vendor-WZELi9Zh.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/query-vendor-Dd9hOVjf.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/router-vendor-BCzXFSrM.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-BqdImQu0.css">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <script src="https://unpkg.com/tw-to-css@0.0.12/dist/cdn.min.js"></script>
+    <style type="text/css">
+
+        :root {
+            --color-primary: #E21D48;
+        }
+        .text-primary {
+            /* color: #E21D48; */
+            color: #55CEFF;
+        }
+        .bg-primary {
+            color: #E21D48;
+        }
+        :where(html[dir="ltr"]),
+        :where([data-sonner-toaster][dir="ltr"]) {
+            --toast-icon-margin-start: -3px;
+            --toast-icon-margin-end: 4px;
+            --toast-svg-margin-start: -1px;
+            --toast-svg-margin-end: 0px;
+            --toast-button-margin-start: auto;
+            --toast-button-margin-end: 0;
+            --toast-close-button-start: 0;
+            --toast-close-button-end: unset;
+            --toast-close-button-transform: translate(-35%, -35%)
+        }
+
+        :where(html[dir="rtl"]),
+        :where([data-sonner-toaster][dir="rtl"]) {
+            --toast-icon-margin-start: 4px;
+            --toast-icon-margin-end: -3px;
+            --toast-svg-margin-start: 0px;
+            --toast-svg-margin-end: -1px;
+            --toast-button-margin-start: 0;
+            --toast-button-margin-end: auto;
+            --toast-close-button-start: unset;
+            --toast-close-button-end: 0;
+            --toast-close-button-transform: translate(35%, -35%)
+        }
+
+        :where([data-sonner-toaster]) {
+            position: fixed;
+            width: var(--width);
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            --gray1: hsl(0, 0%, 99%);
+            --gray2: hsl(0, 0%, 97.3%);
+            --gray3: hsl(0, 0%, 95.1%);
+            --gray4: hsl(0, 0%, 93%);
+            --gray5: hsl(0, 0%, 90.9%);
+            --gray6: hsl(0, 0%, 88.7%);
+            --gray7: hsl(0, 0%, 85.8%);
+            --gray8: hsl(0, 0%, 78%);
+            --gray9: hsl(0, 0%, 56.1%);
+            --gray10: hsl(0, 0%, 52.3%);
+            --gray11: hsl(0, 0%, 43.5%);
+            --gray12: hsl(0, 0%, 9%);
+            --border-radius: 8px;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            outline: none;
+            z-index: 999999999;
+            transition: transform .4s ease
+        }
+
+        :where([data-sonner-toaster][data-lifted="true"]) {
+            transform: translateY(-10px)
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            :where([data-sonner-toaster][data-lifted="true"]) {
+                transform: none
+            }
+        }
+
+        :where([data-sonner-toaster][data-x-position="right"]) {
+            right: var(--offset-right)
+        }
+
+        :where([data-sonner-toaster][data-x-position="left"]) {
+            left: var(--offset-left)
+        }
+
+        :where([data-sonner-toaster][data-x-position="center"]) {
+            left: 50%;
+            transform: translate(-50%)
+        }
+
+        :where([data-sonner-toaster][data-y-position="top"]) {
+            top: var(--offset-top)
+        }
+
+        :where([data-sonner-toaster][data-y-position="bottom"]) {
+            bottom: var(--offset-bottom)
+        }
+
+        :where([data-sonner-toast]) {
+            --y: translateY(100%);
+            --lift-amount: calc(var(--lift) * var(--gap));
+            z-index: var(--z-index);
+            position: absolute;
+            opacity: 0;
+            transform: var(--y);
+            filter: blur(0);
+            touch-action: none;
+            transition: transform .4s, opacity .4s, height .4s, box-shadow .2s;
+            box-sizing: border-box;
+            outline: none;
+            overflow-wrap: anywhere
+        }
+
+        :where([data-sonner-toast][data-styled="true"]) {
+            padding: 16px;
+            background: var(--normal-bg);
+            border: 1px solid var(--normal-border);
+            color: var(--normal-text);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px #0000001a;
+            width: var(--width);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        :where([data-sonner-toast]:focus-visible) {
+            box-shadow: 0 4px 12px #0000001a, 0 0 0 2px #0003
+        }
+
+        :where([data-sonner-toast][data-y-position="top"]) {
+            top: 0;
+            --y: translateY(-100%);
+            --lift: 1;
+            --lift-amount: calc(1 * var(--gap))
+        }
+
+        :where([data-sonner-toast][data-y-position="bottom"]) {
+            bottom: 0;
+            --y: translateY(100%);
+            --lift: -1;
+            --lift-amount: calc(var(--lift) * var(--gap))
+        }
+
+        :where([data-sonner-toast]) :where([data-description]) {
+            font-weight: 400;
+            line-height: 1.4;
+            color: inherit
+        }
+
+        :where([data-sonner-toast]) :where([data-title]) {
+            font-weight: 500;
+            line-height: 1.5;
+            color: inherit
+        }
+
+        :where([data-sonner-toast]) :where([data-icon]) {
+            display: flex;
+            height: 16px;
+            width: 16px;
+            position: relative;
+            justify-content: flex-start;
+            align-items: center;
+            flex-shrink: 0;
+            margin-left: var(--toast-icon-margin-start);
+            margin-right: var(--toast-icon-margin-end)
+        }
+
+        :where([data-sonner-toast][data-promise="true"]) :where([data-icon])>svg {
+            opacity: 0;
+            transform: scale(.8);
+            transform-origin: center;
+            animation: sonner-fade-in .3s ease forwards
+        }
+
+        :where([data-sonner-toast]) :where([data-icon])>* {
+            flex-shrink: 0
+        }
+
+        :where([data-sonner-toast]) :where([data-icon]) svg {
+            margin-left: var(--toast-svg-margin-start);
+            margin-right: var(--toast-svg-margin-end)
+        }
+
+        :where([data-sonner-toast]) :where([data-content]) {
+            display: flex;
+            flex-direction: column;
+            gap: 2px
+        }
+
+        [data-sonner-toast][data-styled=true] [data-button] {
+            border-radius: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+            height: 24px;
+            font-size: 12px;
+            color: var(--normal-bg);
+            background: var(--normal-text);
+            margin-left: var(--toast-button-margin-start);
+            margin-right: var(--toast-button-margin-end);
+            border: none;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            transition: opacity .4s, box-shadow .2s
+        }
+
+        :where([data-sonner-toast]) :where([data-button]):focus-visible {
+            box-shadow: 0 0 0 2px #0006
+        }
+
+        :where([data-sonner-toast]) :where([data-button]):first-of-type {
+            margin-left: var(--toast-button-margin-start);
+            margin-right: var(--toast-button-margin-end)
+        }
+
+        :where([data-sonner-toast]) :where([data-cancel]) {
+            color: var(--normal-text);
+            background: rgba(0, 0, 0, .08)
+        }
+
+        :where([data-sonner-toast][data-theme="dark"]) :where([data-cancel]) {
+            background: rgba(255, 255, 255, .3)
+        }
+
+        :where([data-sonner-toast]) :where([data-close-button]) {
+            position: absolute;
+            left: var(--toast-close-button-start);
+            right: var(--toast-close-button-end);
+            top: 0;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            color: var(--gray12);
+            border: 1px solid var(--gray4);
+            transform: var(--toast-close-button-transform);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+            transition: opacity .1s, background .2s, border-color .2s
+        }
+
+        [data-sonner-toast] [data-close-button] {
+            background: var(--gray1)
+        }
+
+        :where([data-sonner-toast]) :where([data-close-button]):focus-visible {
+            box-shadow: 0 4px 12px #0000001a, 0 0 0 2px #0003
+        }
+
+        :where([data-sonner-toast]) :where([data-disabled="true"]) {
+            cursor: not-allowed
+        }
+
+        :where([data-sonner-toast]):hover :where([data-close-button]):hover {
+            background: var(--gray2);
+            border-color: var(--gray5)
+        }
+
+        :where([data-sonner-toast][data-swiping="true"]):before {
+            content: "";
+            position: absolute;
+            left: -50%;
+            right: -50%;
+            height: 100%;
+            z-index: -1
+        }
+
+        :where([data-sonner-toast][data-y-position="top"][data-swiping="true"]):before {
+            bottom: 50%;
+            transform: scaleY(3) translateY(50%)
+        }
+
+        :where([data-sonner-toast][data-y-position="bottom"][data-swiping="true"]):before {
+            top: 50%;
+            transform: scaleY(3) translateY(-50%)
+        }
+
+        :where([data-sonner-toast][data-swiping="false"][data-removed="true"]):before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            transform: scaleY(2)
+        }
+
+        :where([data-sonner-toast]):after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: calc(var(--gap) + 1px);
+            bottom: 100%;
+            width: 100%
+        }
+
+        :where([data-sonner-toast][data-mounted="true"]) {
+            --y: translateY(0);
+            opacity: 1
+        }
+
+        :where([data-sonner-toast][data-expanded="false"][data-front="false"]) {
+            --scale: var(--toasts-before) * .05 + 1;
+            --y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));
+            height: var(--front-toast-height)
+        }
+
+        :where([data-sonner-toast])>* {
+            transition: opacity .4s
+        }
+
+        :where([data-sonner-toast][data-expanded="false"][data-front="false"][data-styled="true"])>* {
+            opacity: 0
+        }
+
+        :where([data-sonner-toast][data-visible="false"]) {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        :where([data-sonner-toast][data-mounted="true"][data-expanded="true"]) {
+            --y: translateY(calc(var(--lift) * var(--offset)));
+            height: var(--initial-height)
+        }
+
+        :where([data-sonner-toast][data-removed="true"][data-front="true"][data-swipe-out="false"]) {
+            --y: translateY(calc(var(--lift) * -100%));
+            opacity: 0
+        }
+
+        :where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="true"]) {
+            --y: translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));
+            opacity: 0
+        }
+
+        :where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="false"]) {
+            --y: translateY(40%);
+            opacity: 0;
+            transition: transform .5s, opacity .2s
+        }
+
+        :where([data-sonner-toast][data-removed="true"][data-front="false"]):before {
+            height: calc(var(--initial-height) + 20%)
+        }
+
+        [data-sonner-toast][data-swiping=true] {
+            transform: var(--y) translateY(var(--swipe-amount-y, 0px)) translate(var(--swipe-amount-x, 0px));
+            transition: none
+        }
+
+        [data-sonner-toast][data-swiped=true] {
+            user-select: none
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-y-position=bottom],
+        [data-sonner-toast][data-swipe-out=true][data-y-position=top] {
+            animation-duration: .2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-swipe-direction=left] {
+            animation-name: swipe-out-left
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-swipe-direction=right] {
+            animation-name: swipe-out-right
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-swipe-direction=up] {
+            animation-name: swipe-out-up
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-swipe-direction=down] {
+            animation-name: swipe-out-down
+        }
+
+        @keyframes swipe-out-left {
+            0% {
+                transform: var(--y) translate(var(--swipe-amount-x));
+                opacity: 1
+            }
+
+            to {
+                transform: var(--y) translate(calc(var(--swipe-amount-x) - 100%));
+                opacity: 0
+            }
+        }
+
+        @keyframes swipe-out-right {
+            0% {
+                transform: var(--y) translate(var(--swipe-amount-x));
+                opacity: 1
+            }
+
+            to {
+                transform: var(--y) translate(calc(var(--swipe-amount-x) + 100%));
+                opacity: 0
+            }
+        }
+
+        @keyframes swipe-out-up {
+            0% {
+                transform: var(--y) translateY(var(--swipe-amount-y));
+                opacity: 1
+            }
+
+            to {
+                transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%));
+                opacity: 0
+            }
+        }
+
+        @keyframes swipe-out-down {
+            0% {
+                transform: var(--y) translateY(var(--swipe-amount-y));
+                opacity: 1
+            }
+
+            to {
+                transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%));
+                opacity: 0
+            }
+        }
+
+        @media (max-width: 600px) {
+            [data-sonner-toaster] {
+                position: fixed;
+                right: var(--mobile-offset-right);
+                left: var(--mobile-offset-left);
+                width: 100%
+            }
+
+            [data-sonner-toaster][dir=rtl] {
+                left: calc(var(--mobile-offset-left) * -1)
+            }
+
+            [data-sonner-toaster] [data-sonner-toast] {
+                left: 0;
+                right: 0;
+                width: calc(100% - var(--mobile-offset-left) * 2)
+            }
+
+            [data-sonner-toaster][data-x-position=left] {
+                left: var(--mobile-offset-left)
+            }
+
+            [data-sonner-toaster][data-y-position=bottom] {
+                bottom: var(--mobile-offset-bottom)
+            }
+
+            [data-sonner-toaster][data-y-position=top] {
+                top: var(--mobile-offset-top)
+            }
+
+            [data-sonner-toaster][data-x-position=center] {
+                left: var(--mobile-offset-left);
+                right: var(--mobile-offset-right);
+                transform: none
+            }
+        }
+
+        [data-sonner-toaster][data-theme=light] {
+            --normal-bg: #fff;
+            --normal-border: var(--gray4);
+            --normal-text: var(--gray12);
+            --success-bg: hsl(143, 85%, 96%);
+            --success-border: hsl(145, 92%, 91%);
+            --success-text: hsl(140, 100%, 27%);
+            --info-bg: hsl(208, 100%, 97%);
+            --info-border: hsl(221, 91%, 91%);
+            --info-text: hsl(210, 92%, 45%);
+            --warning-bg: hsl(49, 100%, 97%);
+            --warning-border: hsl(49, 91%, 91%);
+            --warning-text: hsl(31, 92%, 45%);
+            --error-bg: hsl(359, 100%, 97%);
+            --error-border: hsl(359, 100%, 94%);
+            --error-text: hsl(360, 100%, 45%)
+        }
+
+        [data-sonner-toaster][data-theme=light] [data-sonner-toast][data-invert=true] {
+            --normal-bg: #000;
+            --normal-border: hsl(0, 0%, 20%);
+            --normal-text: var(--gray1)
+        }
+
+        [data-sonner-toaster][data-theme=dark] [data-sonner-toast][data-invert=true] {
+            --normal-bg: #fff;
+            --normal-border: var(--gray3);
+            --normal-text: var(--gray12)
+        }
+
+        [data-sonner-toaster][data-theme=dark] {
+            --normal-bg: #000;
+            --normal-bg-hover: hsl(0, 0%, 12%);
+            --normal-border: hsl(0, 0%, 20%);
+            --normal-border-hover: hsl(0, 0%, 25%);
+            --normal-text: var(--gray1);
+            --success-bg: hsl(150, 100%, 6%);
+            --success-border: hsl(147, 100%, 12%);
+            --success-text: hsl(150, 86%, 65%);
+            --info-bg: hsl(215, 100%, 6%);
+            --info-border: hsl(223, 100%, 12%);
+            --info-text: hsl(216, 87%, 65%);
+            --warning-bg: hsl(64, 100%, 6%);
+            --warning-border: hsl(60, 100%, 12%);
+            --warning-text: hsl(46, 87%, 65%);
+            --error-bg: hsl(358, 76%, 10%);
+            --error-border: hsl(357, 89%, 16%);
+            --error-text: hsl(358, 100%, 81%)
+        }
+
+        [data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button] {
+            background: var(--normal-bg);
+            border-color: var(--normal-border);
+            color: var(--normal-text)
+        }
+
+        [data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button]:hover {
+            background: var(--normal-bg-hover);
+            border-color: var(--normal-border-hover)
+        }
+
+        [data-rich-colors=true][data-sonner-toast][data-type=success],
+        [data-rich-colors=true][data-sonner-toast][data-type=success] [data-close-button] {
+            background: var(--success-bg);
+            border-color: var(--success-border);
+            color: var(--success-text)
+        }
+
+        [data-rich-colors=true][data-sonner-toast][data-type=info],
+        [data-rich-colors=true][data-sonner-toast][data-type=info] [data-close-button] {
+            background: var(--info-bg);
+            border-color: var(--info-border);
+            color: var(--info-text)
+        }
+
+        [data-rich-colors=true][data-sonner-toast][data-type=warning],
+        [data-rich-colors=true][data-sonner-toast][data-type=warning] [data-close-button] {
+            background: var(--warning-bg);
+            border-color: var(--warning-border);
+            color: var(--warning-text)
+        }
+
+        [data-rich-colors=true][data-sonner-toast][data-type=error],
+        [data-rich-colors=true][data-sonner-toast][data-type=error] [data-close-button] {
+            background: var(--error-bg);
+            border-color: var(--error-border);
+            color: var(--error-text)
+        }
+
+        .sonner-loading-wrapper {
+            --size: 16px;
+            height: var(--size);
+            width: var(--size);
+            position: absolute;
+            inset: 0;
+            z-index: 10
+        }
+
+        .sonner-loading-wrapper[data-visible=false] {
+            transform-origin: center;
+            animation: sonner-fade-out .2s ease forwards
+        }
+
+        .sonner-spinner {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            height: var(--size);
+            width: var(--size)
+        }
+
+        .sonner-loading-bar {
+            animation: sonner-spin 1.2s linear infinite;
+            background: var(--gray11);
+            border-radius: 6px;
+            height: 8%;
+            left: -10%;
+            position: absolute;
+            top: -3.9%;
+            width: 24%
+        }
+
+        .sonner-loading-bar:nth-child(1) {
+            animation-delay: -1.2s;
+            transform: rotate(.0001deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(2) {
+            animation-delay: -1.1s;
+            transform: rotate(30deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(3) {
+            animation-delay: -1s;
+            transform: rotate(60deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(4) {
+            animation-delay: -.9s;
+            transform: rotate(90deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(5) {
+            animation-delay: -.8s;
+            transform: rotate(120deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(6) {
+            animation-delay: -.7s;
+            transform: rotate(150deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(7) {
+            animation-delay: -.6s;
+            transform: rotate(180deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(8) {
+            animation-delay: -.5s;
+            transform: rotate(210deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(9) {
+            animation-delay: -.4s;
+            transform: rotate(240deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(10) {
+            animation-delay: -.3s;
+            transform: rotate(270deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(11) {
+            animation-delay: -.2s;
+            transform: rotate(300deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(12) {
+            animation-delay: -.1s;
+            transform: rotate(330deg) translate(146%)
+        }
+
+        @keyframes sonner-fade-in {
+            0% {
+                opacity: 0;
+                transform: scale(.8)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        @keyframes sonner-fade-out {
+            0% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(.8)
+            }
+        }
+
+        @keyframes sonner-spin {
+            0% {
+                opacity: 1
+            }
+
+            to {
+                opacity: .15
+            }
+        }
+
+        @media (prefers-skyuced-motion) {
+
+            [data-sonner-toast],
+            [data-sonner-toast]>*,
+            .sonner-loading-bar {
+                transition: none !important;
+                animation: none !important
+            }
+        }
+
+        .sonner-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+            transition: opacity .2s, transform .2s
+        }
+
+        .sonner-loader[data-visible=false] {
+            opacity: 0;
+            transform: scale(.8) translate(-50%, -50%)
+        }
+    </style>
+    <style id="mgx-editable-styles">
+        [data-mgx-editing] {
+            outline: 2px solid #00000000 !important;
+        }
+
+        [data-mgx-editing]:focus {
+            outline: 2px solid #00000000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text"
+            aria-atomic="false"></section>
+        <div class="min-h-screen">
+            <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-sky-100/50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-16"><a href="#"
+                            class="text-xl font-bold text-primary">Nikah <span class="text-black">Cerdas</span></a>
+                        <div class="hidden md:flex items-center gap-8">
+                            <a href="#masalah"
+                                class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer">Masalah</a>
+                            <a
+                                href="#tentang"
+                                class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer">Tentang
+                            </a>
+                            <a
+                                href="#manfaat"
+                                class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer">Manfaat
+                            </a>
+                            <a
+                                href="#cara-kerja"
+                                class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer">Cara Kerja
+                            </a>
+                            <a 
+                                href="#testimoni"
+                                class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer">Testimoni
+                            </a>
+                            <a 
+                                href="#tim-kami"
+                                class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer">Tim Kami
+                            </a>
+                            <a 
+                                href="#faq"
+                                class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer">FAQ
+                            </a>
+                        </div>
+                        <a href="#cta"
+                            class="inline-flex items-center justify-center rounded-full bg-[#008FC8] px-5 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-1 hover:bg-[#0078AA] hover:shadow-xl active:scale-95 cursor-pointer">
+                            Daftar Sekarang
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <main class="pt-16">
+                <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-elixir-50 via-white to-sky-50"></div>
+                    <div class="absolute top-20 right-10 w-72 h-72 bg-sky-100/40 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-20 left-10 w-96 h-96 bg-sky-100/30 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <div class="space-y-8">
+                                <div
+                                    class="inline-flex max-w-full items-center gap-2 rounded-full border border-sky-100 bg-blue-50 px-3 py-2 text-xs text-sky-600 sm:px-4 sm:text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="h-4 w-4 flex-shrink-0">
+                                        <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                                        <polyline points="16 17 22 17 22 11"></polyline>
+                                    </svg>
+
+                                    <span class="font-semibold leading-snug">
+                                        516.334 kasus perceraian di Indonesia (2023)
+                                    </span>
+                                </div>
+                                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+                                        Jangan Biarkan
+                                        <span class="text-primary">Ketidakpahaman</span>
+                                        Menghancurkan Pernikahan Anda
+                                    </h1>
+                                    <p class="max-w-xl mx-auto lg:mx-0 text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground">
+                                        <span class="font-semibold text-foreground">76% perceraian</span>
+                                        dipicu oleh konflik yang berulang. Akar masalahnya? Pasangan tidak saling
+                                        memahami karakter dasar masing-masing.
+                                    </p>
+
+                                    <p class="max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed text-muted-foreground">
+                                        Asesmen STIFIn membantu Anda dan pasangan mengenal potensi genetik serta
+                                        karakter fitrah, sehingga Anda dapat saling memahami, meminimalisir konflik,
+                                        dan membangun pernikahan yang lebih harmonis.
+                                    </p>
+                                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+
+                                        <button
+                                            class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-sky-700 shadow-lg shadow-sky-200 transition-transform duration-300 ease-out hover:scale-105 active:scale-95 cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="w-5 h-5">
+                                                <path
+                                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                                </path>
+                                            </svg>
+
+                                            Mulai Asesmen Sekarang
+                                        </button>
+
+                                        <button
+                                            class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-sky-200 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-foreground transition-transform duration-300 ease-out hover:scale-105 active:scale-95 cursor-pointer">
+                                            Pelajari Lebih Lanjut
+                                        </button>
+
+                                    </div>
+                                <div class="flex items-center gap-4 pt-4">
+                                    <div class="flex -space-x-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-200 to-sky-200 border-2 border-white flex items-center justify-center text-xs font-bold text-sky-700">
+                                            A</div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-200 to-sky-200 border-2 border-white flex items-center justify-center text-xs font-bold text-sky-700">
+                                            B</div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-200 to-sky-200 border-2 border-white flex items-center justify-center text-xs font-bold text-sky-700">
+                                            C</div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-200 to-sky-200 border-2 border-white flex items-center justify-center text-xs font-bold text-sky-700">
+                                            D</div>
+                                    </div>
+                                    <p class="text-sm text-muted-foreground"><span
+                                            class="font-semibold text-foreground">2.500+</span> pasangan telah terbantu
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="relative hidden lg:block">
+                                <div
+                                    class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-sky-100">
+                                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/1450664/2026-07-21/s4xpzjqcaiza/hero-muslim-couple-hijab.png"
+                                        alt="Pasangan muslim bahagia yang saling memahami"
+                                        class="w-full h-full object-cover" id="hero-image">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-sky-900/20 to-transparent">
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 border border-sky-50">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-heart w-6 h-6 text-green-600">
+                                                <path
+                                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                                </path>
+                                            </svg></div>
+                                        <div>
+                                            <p class="font-bold text-sm">Tingkat Kepuasan</p>
+                                            <p class="text-green-600 font-bold text-lg">94%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="masalah" class="py-20 md:py-28 bg-gradient-to-b from-white to-sky-50/50">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-3xl mx-auto text-center mb-10 lg:mb-16">
+
+                            <span
+                                class="inline-block mb-3 lg:mb-4 text-sm sm:text-base lg:text-xl font-semibold tracking-wider uppercase text-primary">
+                                Akar Masalah
+                            </span>
+
+                            <h2 class="mb-5 lg:mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                                Mengapa <span class="text-primary">Konflik</span> Terus
+                                <br class="hidden lg:block">
+                                Terjadi dalam Pernikahan?
+                            </h2>
+
+                            <p class="mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-muted-foreground">
+                                Bukan karena tidak cinta. Bukan karena tidak berusaha.
+                                Tapi karena pasangan
+                                <span class="font-semibold text-foreground">
+                                    tidak memahami karakter dasar
+                                </span>
+                                masing-masing—cara berpikir, merasa, dan bertindak yang sudah menjadi
+                                fitrah sejak lahir.
+                            </p>
+
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                            <div class="rounded-2xl border p-6 text-center bg-sky-50 text-sky-700 border-sky-100">
+                                <p class="text-3xl md:text-4xl font-bold mb-2">516.334</p>
+                                <p class="text-sm font-medium">Kasus perceraian per tahun (2023)</p>
+                            </div>
+                            <div
+                                class="rounded-2xl border p-6 text-center bg-sky-50 text-sky-700 border-sky-100">
+                                <p class="text-3xl md:text-4xl font-bold mb-2">76%</p>
+                                <p class="text-sm font-medium">Dipicu konflik berulang</p>
+                            </div>
+                            <div class="rounded-2xl border p-6 text-center bg-amber-50 text-amber-700 border-amber-100">
+                                <p class="text-3xl md:text-4xl font-bold mb-2">60%</p>
+                                <p class="text-sm font-medium">Terjadi di 5 tahun pertama</p>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div
+                                class="group rounded-2xl border border-sky-100 bg-white p-6 lg:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-100/50">
+
+                                <div class="flex items-start gap-4">
+
+                                    <div
+                                        class="flex h-12 w-12 lg:h-14 lg:w-14 flex-shrink-0 items-center justify-center rounded-xl bg-sky-50 transition-colors duration-300 group-hover:bg-sky-100">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="h-6 w-6 lg:h-7 lg:w-7 text-sky-600">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                            <path d="m14.5 7.5-5 5"></path>
+                                            <path d="m9.5 7.5 5 5"></path>
+                                        </svg>
+
+                                    </div>
+
+                                    <div>
+                                        <h3 class="mb-2 text-lg font-bold text-slate-900">
+                                            Miskomunikasi Berulang
+                                        </h3>
+
+                                        <p class="text-sm lg:text-base leading-relaxed text-slate-600">
+                                            Pasangan berbicara tetapi tidak saling mengerti. Perbedaan cara
+                                            berpikir membuat pesan yang disampaikan sering kali tidak
+                                            dipahami dengan baik sehingga memicu konflik yang berulang.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div
+                                class="group rounded-2xl border border-sky-100 bg-white p-6 lg:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-100/50">
+
+                                <div class="flex items-start gap-4">
+
+                                    <div
+                                        class="flex h-12 w-12 lg:h-14 lg:w-14 flex-shrink-0 items-center justify-center rounded-xl bg-sky-50 transition-colors duration-300 group-hover:bg-sky-100">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="h-6 w-6 lg:h-7 lg:w-7 text-sky-600">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+
+                                    </div>
+
+                                    <div>
+                                        <h3 class="mb-2 text-lg font-bold text-slate-900">
+                                            Ekspektasi Tidak Realistis
+                                        </h3>
+
+                                        <p class="text-sm lg:text-base leading-relaxed text-slate-600">
+                                            Mengharapkan pasangan berubah sesuai keinginan tanpa memahami
+                                            bahwa setiap orang memiliki karakter bawaan yang berbeda.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div
+                                class="group rounded-2xl border border-sky-100 bg-white p-6 lg:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-100/50">
+
+                                <div class="flex items-start gap-4">
+
+                                    <div
+                                        class="flex h-12 w-12 lg:h-14 lg:w-14 flex-shrink-0 items-center justify-center rounded-xl bg-sky-50 transition-colors duration-300 group-hover:bg-sky-100">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="h-6 w-6 lg:h-7 lg:w-7 text-sky-600">
+                                            <path
+                                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                            </path>
+                                            <path d="m12 13-1-1 2-2-3-3 2-2"></path>
+                                        </svg>
+
+                                    </div>
+
+                                    <div>
+                                        <h3 class="mb-2 text-lg font-bold text-slate-900">
+                                            Konflik yang Sama Berulang
+                                        </h3>
+
+                                        <p class="text-sm lg:text-base leading-relaxed text-slate-600">
+                                            Pertengkaran mengenai hal yang sama terus berulang karena akar
+                                            permasalahannya, yaitu kurangnya pemahaman terhadap karakter
+                                            masing-masing, belum pernah benar-benar diselesaikan.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div
+                                class="group rounded-2xl border border-sky-100 bg-white p-6 lg:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-100/50">
+
+                                <div class="flex items-start gap-4">
+
+                                    <div
+                                        class="flex h-12 w-12 lg:h-14 lg:w-14 flex-shrink-0 items-center justify-center rounded-xl bg-sky-50 transition-colors duration-300 group-hover:bg-sky-100">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="h-6 w-6 lg:h-7 lg:w-7 text-sky-600">
+                                            <path
+                                                d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3">
+                                            </path>
+                                            <path d="M12 9v4"></path>
+                                            <path d="M12 17h.01"></path>
+                                        </svg>
+
+                                    </div>
+
+                                    <div>
+                                        <h3 class="mb-2 text-lg font-bold text-slate-900">
+                                            Tidak Tahu Cara Menyelesaikan
+                                        </h3>
+
+                                        <p class="text-sm lg:text-base leading-relaxed text-slate-600">
+                                            Tanpa memahami tipe kepribadian pasangan, penyelesaian konflik
+                                            sering dilakukan dengan cara coba-coba sehingga menguras energi,
+                                            waktu, dan emosi.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="mt-16 text-center">
+                            <p class="text-lg text-muted-foreground italic max-w-2xl mx-auto">"Masalahnya bukan pada
+                                pasangan Anda. Masalahnya adalah Anda belum mengenal <span
+                                    class="font-semibold text-foreground not-italic">siapa sebenarnya</span> pasangan
+                                Anda — dan siapa sebenarnya diri Anda."</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="tentang" class="py-20 md:py-28 bg-white">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid lg:grid-cols-2 gap-16 items-center">
+                            <div class="relative">
+                                <div class="relative w-full aspect-square max-w-md mx-auto">
+                                    <div
+                                        class="absolute inset-0 rounded-3xl bg-gradient-to-br from-sky-100 to-sky-50 shadow-lg">
+                                    </div><img
+                                        src="https://mgx-backend-cdn.metadl.com/generate/images/1450664/2026-07-21/s4wznxicaiyq/stifin-brain-mapping-fingerprint.png"
+                                        alt="STIFIn Brain Mapping - Pemetaan potensi genetik melalui sidik jari"
+                                        class="relative z-10 w-full h-full object-cover rounded-3xl" id="stifin-image">
+                                </div>
+                                <div
+                                    class="absolute top-4 -right-2 md:right-4 bg-white rounded-xl shadow-lg p-3 border border-sky-50">
+                                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-fingerprint w-5 h-5 text-primary">
+                                            <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path>
+                                            <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path>
+                                            <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path>
+                                            <path d="M2 12a10 10 0 0 1 18-6"></path>
+                                            <path d="M2 16h.01"></path>
+                                            <path d="M21.8 16c.2-2 .131-5.354 0-6"></path>
+                                            <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path>
+                                            <path d="M8.65 22c.21-.66.45-1.32.57-2"></path>
+                                            <path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path>
+                                        </svg><span class="text-sm font-semibold">Berbasis Sidik Jari</span></div>
+                                </div>
+                                <div
+                                    class="absolute bottom-4 -left-2 md:left-4 bg-white rounded-xl shadow-lg p-3 border border-sky-50">
+                                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-shield w-5 h-5 text-green-600">
+                                            <path
+                                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                            </path>
+                                        </svg><span class="text-sm font-semibold">Akurat &amp; Permanen</span></div>
+                                </div>
+                            </div>
+                            <div class="space-y-8">
+                                <div><span
+                                        class="inline-block text-xl font-semibold tracking-wider uppercase text-primary mb-4">Solusi
+                                        Efektif</span>
+                                    <h2 class="mb-6 text-4xl font-bold">Kenali <span class="text-primary">Karakter Fitrah</span> dengan
+                                        Asesmen STIFIn</h2>
+                                    <p class="text-lg text-muted-foreground">STIFIn adalah metode asesmen yang memetakan
+                                        potensi genetik seseorang melalui <span
+                                            class="font-semibold text-foreground">sidik jari</span>. Hasilnya
+                                        menunjukkan mesin kecerdasan dominan yang bersifat tetap dan tidak berubah
+                                        seumur hidup.</p>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="flex-shrink-0 w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-brain w-5 h-5 text-primary">
+                                                <path
+                                                    d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z">
+                                                </path>
+                                                <path
+                                                    d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z">
+                                                </path>
+                                                <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
+                                                <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+                                                <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                                                <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                                                <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+                                                <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                                                <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+                                            </svg></div>
+                                        <p class="text-foreground pt-2">Berbasis riset neuroscience — bukan sekadar tes
+                                            psikologi biasa</p>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="flex-shrink-0 w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-fingerprint w-5 h-5 text-primary">
+                                                <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path>
+                                                <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path>
+                                                <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path>
+                                                <path d="M2 12a10 10 0 0 1 18-6"></path>
+                                                <path d="M2 16h.01"></path>
+                                                <path d="M21.8 16c.2-2 .131-5.354 0-6"></path>
+                                                <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path>
+                                                <path d="M8.65 22c.21-.66.45-1.32.57-2"></path>
+                                                <path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path>
+                                            </svg></div>
+                                        <p class="text-foreground pt-2">Cukup sekali tes seumur hidup — hasilnya
+                                            permanen karena genetik</p>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="flex-shrink-0 w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-sparkles w-5 h-5 text-primary">
+                                                <path
+                                                    d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                                                </path>
+                                                <path d="M20 3v4"></path>
+                                                <path d="M22 5h-4"></path>
+                                                <path d="M4 17v2"></path>
+                                                <path d="M5 18H3"></path>
+                                            </svg></div>
+                                        <p class="text-foreground pt-2">Langsung aplikatif — rekomendasi spesifik untuk
+                                            relasi pasangan</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wider">
+                                        5 Mesin Kecerdasan:</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <div
+                                            class="rounded-full px-4 py-2 border text-sm font-semibold bg-blue-50 text-blue-700 border-blue-200">
+                                            <span class="font-bold">S</span> — Sensing</div>
+                                        <div
+                                            class="rounded-full px-4 py-2 border text-sm font-semibold bg-emerald-50 text-emerald-700 border-emerald-200">
+                                            <span class="font-bold">T</span> — Thinking</div>
+                                        <div
+                                            class="rounded-full px-4 py-2 border text-sm font-semibold bg-purple-50 text-purple-700 border-purple-200">
+                                            <span class="font-bold">I</span> — Intuiting</div>
+                                        <div
+                                            class="rounded-full px-4 py-2 border text-sm font-semibold bg-sky-50 text-sky-700 border-sky-200">
+                                            <span class="font-bold">F</span> — Feeling</div>
+                                        <div
+                                            class="rounded-full px-4 py-2 border text-sm font-semibold bg-amber-50 text-amber-700 border-amber-200">
+                                            <span class="font-bold">In</span> — Instinct</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="manfaat" class="py-20 md:py-28 bg-gradient-to-b from-sky-50/30 to-white">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-3xl mx-auto text-center mb-16"><span
+                                class="inline-block text-xl font-semibold tracking-wider uppercase text-primary mb-4">Manfaat</span>
+                            <h2 class="mb-6 text-4xl font-bold">Apa yang Anda <span class="text-primary">Dapatkan</span>?</h2>
+                            <p class="text-lg text-muted-foreground">Asesmen STIFIn memberikan pemahaman mendalam yang
+                                langsung bisa diaplikasikan dalam kehidupan pernikahan sehari-hari.</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div
+                                class="group rounded-2xl p-8 bg-gradient-to-br from-amber-50 to-sky-50 border border-white/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                                <div
+                                    class="w-14 h-14 rounded-xl text-amber-600 bg-amber-100 flex items-center justify-center mb-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-lightbulb w-7 h-7">
+                                        <path
+                                            d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5">
+                                        </path>
+                                        <path d="M9 18h6"></path>
+                                        <path d="M10 22h4"></path>
+                                    </svg></div>
+                                <h3 class="text-lg font-bold mb-3 text-foreground">Kenali Diri Sendiri</h3>
+                                <p class="text-muted-foreground leading-relaxed">Pahami mesin kecerdasan dominan Anda —
+                                    cara berpikir, belajar, dan mengambil keputusan yang paling alami bagi Anda.</p>
+                            </div>
+                            <div
+                                class="group rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-indigo-50 border border-white/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                                <div
+                                    class="w-14 h-14 rounded-xl text-blue-600 bg-blue-100 flex items-center justify-center mb-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-users w-7 h-7">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg></div>
+                                <h3 class="text-lg font-bold mb-3 text-foreground">Pahami Pasangan</h3>
+                                <p class="text-muted-foreground leading-relaxed">Ketahui mengapa pasangan bereaksi
+                                    berbeda. Bukan salah atau benar — hanya berbeda mesin kecerdasannya.</p>
+                            </div>
+                            <div
+                                class="group rounded-2xl p-8 bg-gradient-to-br from-green-50 to-emerald-50 border border-white/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                                <div
+                                    class="w-14 h-14 rounded-xl text-green-600 bg-green-100 flex items-center justify-center mb-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-message-circle w-7 h-7">
+                                        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                                    </svg></div>
+                                <h3 class="text-lg font-bold mb-3 text-foreground">Komunikasi Efektif</h3>
+                                <p class="text-muted-foreground leading-relaxed">Temukan gaya komunikasi yang tepat
+                                    sesuai tipe STIFIn pasangan. Pesan tersampaikan, hati tersentuh.</p>
+                            </div>
+                            <div
+                                class="group rounded-2xl p-8 bg-gradient-to-br from-sky-50 to-pink-50 border border-white/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                                <div
+                                    class="w-14 h-14 rounded-xl text-sky-600 bg-sky-100 flex items-center justify-center mb-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-shield w-7 h-7">
+                                        <path
+                                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                        </path>
+                                    </svg></div>
+                                <h3 class="text-lg font-bold mb-3 text-foreground">Minimalisir Konflik</h3>
+                                <p class="text-muted-foreground leading-relaxed">Antisipasi titik-titik gesekan
+                                    berdasarkan kombinasi tipe. Cegah sebelum konflik membesar.</p>
+                            </div>
+                            <div
+                                class="group rounded-2xl p-8 bg-gradient-to-br from-purple-50 to-violet-50 border border-white/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                                <div
+                                    class="w-14 h-14 rounded-xl text-purple-600 bg-purple-100 flex items-center justify-center mb-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-puzzle w-7 h-7">
+                                        <path
+                                            d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z">
+                                        </path>
+                                    </svg></div>
+                                <h3 class="text-lg font-bold mb-3 text-foreground">Manajemen Konflik Tepat</h3>
+                                <p class="text-muted-foreground leading-relaxed">Setiap kombinasi tipe punya strategi
+                                    penyelesaian yang berbeda. Ketahui cara yang paling efektif untuk pasangan Anda.</p>
+                            </div>
+                            <div
+                                class="group rounded-2xl p-8 bg-gradient-to-br from-sky-50 to-sky-50 border border-white/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                                <div
+                                    class="w-14 h-14 rounded-xl text-sky-600 bg-sky-100 flex items-center justify-center mb-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-heart w-7 h-7">
+                                        <path
+                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                        </path>
+                                    </svg></div>
+                                <h3 class="text-lg font-bold mb-3 text-foreground">Pernikahan Harmonis</h3>
+                                <p class="text-muted-foreground leading-relaxed">Bangun hubungan yang saling melengkapi,
+                                    bukan saling mengubah. Terima dan optimalkan perbedaan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="cara-kerja" class="py-20 md:py-28 bg-white">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-3xl mx-auto text-center mb-16"><span
+                                class="inline-block text-xl font-semibold tracking-wider uppercase text-primary mb-4">Cara
+                                Kerja</span>
+                            <h2 class="mb-6 text-4xl font-bold">Pskysnya <span class="text-primary">Mudah</span> dan Menyenangkan</h2>
+                            <p class="text-lg text-muted-foreground">Dalam 5 langkah sederhana, Anda dan pasangan akan
+                                mendapatkan pemahaman yang mengubah cara Anda memandang hubungan.</p>
+                        </div>
+                        <div class="relative max-w-4xl mx-auto">
+                            <!-- <div
+                                class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-sky-200 via-sky-300 to-sky-200 hidden md:block">
+                            </div> -->
+                            <div class="space-y-8 md:space-y-12">
+                                <div class="relative flex flex-col md:flex-row items-start gap-6 md:flex-row">
+                                    <div
+                                        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 rounded-full bg-sky-600">
+                                    </div>
+                                    <div class="flex-1 md:text-right md:pr-12">
+                                        <div
+                                            class="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                            <div class="flex items-center gap-3 mb-3 md:justify-end">
+                                                <div
+                                                    class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center md:hidden">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-clipboard-list w-5 h-5 text-primary">
+                                                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                                                        <path
+                                                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                                                        </path>
+                                                        <path d="M12 11h4"></path>
+                                                        <path d="M12 16h4"></path>
+                                                        <path d="M8 11h.01"></path>
+                                                        <path d="M8 16h.01"></path>
+                                                    </svg></div>
+                                                <h3 class="text-lg font-bold text-foreground">Pendaftaran</h3>
+                                            </div>
+                                            <p class="text-muted-foreground">Daftarkan diri Anda dan pasangan. Bisa
+                                                dilakukan bersama atau terpisah.</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white border-4 border-sky-200 items-center justify-center shadow-sm z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clipboard-list w-6 h-6 text-primary">
+                                            <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                                            <path
+                                                d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                                            </path>
+                                            <path d="M12 11h4"></path>
+                                            <path d="M12 16h4"></path>
+                                            <path d="M8 11h.01"></path>
+                                            <path d="M8 16h.01"></path>
+                                        </svg></div>
+                                    <div class="flex-1 hidden md:block"></div>
+                                </div>
+                                <div class="relative flex flex-col md:flex-row items-start gap-6 md:flex-row-reverse">
+                                    <div class="flex-1 md:text-left md:pl-12">
+                                        <div
+                                            class="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                            <div class="flex items-center gap-3 mb-3 ">
+                                                <div
+                                                    class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center md:hidden">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-fingerprint w-5 h-5 text-primary">
+                                                        <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path>
+                                                        <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path>
+                                                        <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path>
+                                                        <path d="M2 12a10 10 0 0 1 18-6"></path>
+                                                        <path d="M2 16h.01"></path>
+                                                        <path d="M21.8 16c.2-2 .131-5.354 0-6"></path>
+                                                        <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path>
+                                                        <path d="M8.65 22c.21-.66.45-1.32.57-2"></path>
+                                                        <path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path>
+                                                    </svg></div>
+                                                <h3 class="text-lg font-bold text-foreground">Tes Sidik Jari</h3>
+                                            </div>
+                                            <p class="text-muted-foreground">Pskys scanning sidik jari yang cepat dan
+                                                nyaman. Hanya butuh 5-10 menit per orang.</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white border-4 border-sky-200 items-center justify-center shadow-sm z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-fingerprint w-6 h-6 text-primary">
+                                            <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path>
+                                            <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path>
+                                            <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path>
+                                            <path d="M2 12a10 10 0 0 1 18-6"></path>
+                                            <path d="M2 16h.01"></path>
+                                            <path d="M21.8 16c.2-2 .131-5.354 0-6"></path>
+                                            <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path>
+                                            <path d="M8.65 22c.21-.66.45-1.32.57-2"></path>
+                                            <path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path>
+                                        </svg></div>
+                                    <div class="flex-1 hidden md:block"></div>
+                                </div>
+                                <div class="relative flex flex-col md:flex-row items-start gap-6 md:flex-row">
+                                    <div class="flex-1 md:text-right md:pr-12">
+                                        <div
+                                            class="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                            <div class="flex items-center gap-3 mb-3 md:justify-end">
+                                                <div
+                                                    class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center md:hidden">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-chart-column w-5 h-5 text-primary">
+                                                        <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                                                        <path d="M18 17V9"></path>
+                                                        <path d="M13 17V5"></path>
+                                                        <path d="M8 17v-3"></path>
+                                                    </svg></div>
+                                                <h3 class="text-lg font-bold text-foreground">Analisis Hasil</h3>
+                                            </div>
+                                            <p class="text-muted-foreground">Tim ahli menganalisis pola sidik jari untuk
+                                                menentukan mesin kecerdasan dominan Anda.</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white border-4 border-sky-200 items-center justify-center shadow-sm z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-chart-column w-6 h-6 text-primary">
+                                            <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                                            <path d="M18 17V9"></path>
+                                            <path d="M13 17V5"></path>
+                                            <path d="M8 17v-3"></path>
+                                        </svg></div>
+                                    <div class="flex-1 hidden md:block"></div>
+                                </div>
+                                <div class="relative flex flex-col md:flex-row items-start gap-6 md:flex-row-reverse">
+                                    <div class="flex-1 md:text-left md:pl-12">
+                                        <div
+                                            class="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                            <div class="flex items-center gap-3 mb-3 ">
+                                                <div
+                                                    class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center md:hidden">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-users w-5 h-5 text-primary">
+                                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="9" cy="7" r="4"></circle>
+                                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    </svg></div>
+                                                <h3 class="text-lg font-bold text-foreground">Sesi Konsultasi Pasangan
+                                                </h3>
+                                            </div>
+                                            <p class="text-muted-foreground">Konsultasi bersama konselor STIFIn yang
+                                                membahas dinamika kombinasi tipe Anda dan pasangan.</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white border-4 border-sky-200 items-center justify-center shadow-sm z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-users w-6 h-6 text-primary">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg></div>
+                                    <div class="flex-1 hidden md:block"></div>
+                                </div>
+                                <div class="relative flex flex-col md:flex-row items-start gap-6 md:flex-row">
+                                    <div class="flex-1 md:text-right md:pr-12">
+                                        <div
+                                            class="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                            <div class="flex items-center gap-3 mb-3 md:justify-end">
+                                                <div
+                                                    class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center md:hidden">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-file-check w-5 h-5 text-primary">
+                                                        <path
+                                                            d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z">
+                                                        </path>
+                                                        <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                                                        <path d="m9 15 2 2 4-4"></path>
+                                                    </svg></div>
+                                                <h3 class="text-lg font-bold text-foreground">Rekomendasi Praktis</h3>
+                                            </div>
+                                            <p class="text-muted-foreground">Dapatkan panduan spesifik: cara komunikasi,
+                                                titik konflik, dan strategi penyelesaian untuk kombinasi tipe Anda.</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white border-4 border-sky-200 items-center justify-center shadow-sm z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-file-check w-6 h-6 text-primary">
+                                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                                            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                                            <path d="m9 15 2 2 4-4"></path>
+                                        </svg></div>
+                                    <div class="flex-1 hidden md:block"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="testimoni" class="py-20 md:py-28 bg-gradient-to-b from-white to-sky-50/40">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-3xl mx-auto text-center mb-16"><span
+                                class="inline-block text-xl font-semibold tracking-wider uppercase text-primary mb-4">Testimoni</span>
+                            <h2 class="mb-6 text-4xl font-bold">Cerita <span class="text-primary">Pasangan</span> yang Telah Terbantu</h2>
+                            <p class="text-lg text-muted-foreground">Ribuan pasangan telah merasakan manfaat asesmen
+                                STIFIn untuk pernikahan mereka.</p>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div
+                                class="bg-white rounded-2xl p-8 border border-sky-100/60 shadow-sm hover:shadow-md transition-all duration-300 relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-quote w-10 h-10 text-sky-100 absolute top-6 right-6">
+                                    <path
+                                        d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                    </path>
+                                    <path
+                                        d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                    </path>
+                                </svg>
+                                <div class="flex gap-1 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg></div>
+                                <p class="text-foreground leading-relaxed mb-6 relative z-10">"Sebelum asesmen, kami
+                                    sering bertengkar karena saya merasa Dimas terlalu dingin. Ternyata dia tipe
+                                    Thinking — logis dan objektif. Sekarang saya paham itu caranya menunjukkan
+                                    perhatian, bukan ketidakpedulian."</p>
+                                <div class="border-t border-sky-50 pt-4">
+                                    <p class="font-bold text-foreground">Rina &amp; Dimas</p>
+                                    <p class="text-sm text-primary font-semibold">Feeling + Thinking</p>
+                                    <p class="text-sm text-muted-foreground">Menikah 3 tahun</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-8 border border-sky-100/60 shadow-sm hover:shadow-md transition-all duration-300 relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-quote w-10 h-10 text-sky-100 absolute top-6 right-6">
+                                    <path
+                                        d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                    </path>
+                                    <path
+                                        d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                    </path>
+                                </svg>
+                                <div class="flex gap-1 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg></div>
+                                <p class="text-foreground leading-relaxed mb-6 relative z-10">"Saya tipe Sensing yang
+                                    detail, istri saya Intuiting yang visioner. Dulu saya frustrasi karena dia 'tidak
+                                    praktis'. Sekarang kami jadi tim yang saling melengkapi — saya eksekusi, dia yang
+                                    punya ide besar."</p>
+                                <div class="border-t border-sky-50 pt-4">
+                                    <p class="font-bold text-foreground">Andi &amp; Sari</p>
+                                    <p class="text-sm text-primary font-semibold">Sensing + Intuiting</p>
+                                    <p class="text-sm text-muted-foreground">Menikah 7 tahun</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-8 border border-sky-100/60 shadow-sm hover:shadow-md transition-all duration-300 relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-quote w-10 h-10 text-sky-100 absolute top-6 right-6">
+                                    <path
+                                        d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                    </path>
+                                    <path
+                                        d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                    </path>
+                                </svg>
+                                <div class="flex gap-1 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-star w-4 h-4 fill-amber-400 text-amber-400">
+                                        <path
+                                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                                        </path>
+                                    </svg></div>
+                                <p class="text-foreground leading-relaxed mb-6 relative z-10">"Kami ikut asesmen sebelum
+                                    menikah. Sangat membantu! Kami jadi tahu titik-titik yang berpotensi konflik dan
+                                    cara mengatasinya. Setahun pertama pernikahan kami jauh lebih smooth dari yang kami
+                                    bayangkan."</p>
+                                <div class="border-t border-sky-50 pt-4">
+                                    <p class="font-bold text-foreground">Maya &amp; Reza</p>
+                                    <p class="text-sm text-primary font-semibold">Instinct + Feeling</p>
+                                    <p class="text-sm text-muted-foreground">Menikah 1 tahun</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="tim-kami" class="py-20 md:py-28 bg-gradient-to-b from-white to-sky-50/40">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                        <div class="max-w-3xl mx-auto text-center mb-16">
+                            <span class="inline-block text-xl font-semibold tracking-wider uppercase text-primary mb-4">
+                                Tim Kami
+                            </span>
+
+                            <h2 class="mb-6 text-4xl font-bold">
+                                Kenali <span class="text-primary">Promotor STIFIn</span> Kami
+                            </h2>
+
+                            <p class="text-lg text-muted-foreground">
+                                Didampingi oleh promotor STIFIn berlisensi yang memiliki pengalaman
+                                di bidang pendidikan dan konseling.
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+
+                            <div
+                                class="bg-white rounded-2xl p-8 border border-sky-100/60 shadow-sm hover:shadow-md transition-all duration-300">
+
+                                <div class="flex items-center gap-5">
+
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-sky-100 flex items-center justify-center">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-8 h-8 text-primary"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2">
+
+                                            <path stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-6-3l6 3 6-3" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div>
+                                        <h3 class="text-xl font-bold">
+                                            Rosihan Ari Yuana, S.Si., M.Kom
+                                        </h3>
+
+                                        <p class="text-primary font-semibold">
+                                            Associate Professor
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="border-t border-sky-50 my-6"></div>
+
+                                <p class="leading-relaxed text-muted-foreground">
+                                    Dosen dan peneliti di Fakultas Keguruan dan Ilmu Pendidikan
+                                    Universitas Sebelas Maret. Menjadi Promotor STIFIn
+                                    berlisensi sejak tahun 2024.
+                                </p>
+
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-8 border border-sky-100/60 shadow-sm hover:shadow-md transition-all duration-300">
+
+                                <div class="flex items-center gap-5">
+
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-sky-100 flex items-center justify-center">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-8 h-8 text-primary"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2">
+
+                                            <path stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M17 20h5V4H2v16h5m10 0v-8H7v8m10 0H7" />
+
+                                        </svg>
+
+                                    </div>
+
+                                    <div>
+                                        <h3 class="text-xl font-bold">
+                                            Dwi Amalia Fitriani, S.Si.
+                                        </h3>
+
+                                        <p class="text-primary font-semibold">
+                                            Konselor Pernikahan
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="border-t border-sky-50 my-6"></div>
+
+                                <p class="leading-relaxed text-muted-foreground">
+                                    Alumni Universitas Sebelas Maret. Pemerhati dan konselor
+                                    pernikahan. Menjadi Promotor STIFIn berlisensi sejak tahun
+                                    2024.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="faq" class="py-20 md:py-28 bg-gradient-to-b from-sky-50/40 to-white">
+
+                    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                        <div class="max-w-3xl mx-auto text-center mb-16">
+
+                            <span class="inline-block text-xl font-semibold tracking-wider uppercase text-primary mb-4">
+                                FAQ
+                            </span>
+
+                            <h2 class="mb-6 text-4xl font-bold">
+                                Pertanyaan yang
+                                <span class="text-primary">Sering Ditanyakan</span>
+                            </h2>
+
+                            <p class="text-lg text-muted-foreground">
+                                Temukan jawaban mengenai asesmen STIFIn, mulai dari akurasi,
+                                metode hingga keamanan data.
+                            </p>
+
+                        </div>
+
+                        <div class="space-y-5">
+
+                            <details class="group bg-white rounded-2xl border border-sky-100/60 shadow-sm">
+                                <summary
+                                    class="flex justify-between items-center p-6 cursor-pointer font-semibold text-lg list-none">
+
+                                    Apakah hasil asesmen STIFIn akurat?
+
+                                    <span class="transition group-open:rotate-180">
+                                        ▼
+                                    </span>
+
+                                </summary>
+
+                                <div class="border-t border-sky-50 px-6 py-5 text-muted-foreground leading-relaxed">
+                                    Tingkat akurasi hasil asesmen STIFIn cukup tinggi, yaitu
+                                    mencapai sekitar <strong>95%</strong>.
+                                </div>
+
+                            </details>
+
+                            <details class="group bg-white rounded-2xl border border-sky-100/60 shadow-sm">
+
+                                <summary
+                                    class="flex justify-between items-center p-6 cursor-pointer font-semibold text-lg list-none">
+
+                                    Apakah metode asesmen STIFIn ilmiah?
+
+                                    <span class="transition group-open:rotate-180">
+                                        ▼
+                                    </span>
+
+                                </summary>
+
+                                <div class="border-t border-sky-50 px-6 py-5 text-muted-foreground leading-relaxed">
+                                    Metode asesmen STIFIn merupakan perpaduan antara ilmu
+                                    psikologi, neurosains, dan dermatoglifi. Konsep dasarnya
+                                    dibangun berdasarkan ilmu psikologi klasik yang ilmiah.
+                                </div>
+
+                            </details>
+
+                            <details class="group bg-white rounded-2xl border border-sky-100/60 shadow-sm">
+
+                                <summary
+                                    class="flex justify-between items-center p-6 cursor-pointer font-semibold text-lg list-none">
+
+                                    Apakah ada batasan durasi konsultasi?
+
+                                    <span class="transition group-open:rotate-180">
+                                        ▼
+                                    </span>
+
+                                </summary>
+
+                                <div class="border-t border-sky-50 px-6 py-5 text-muted-foreground leading-relaxed">
+                                    Tidak ada batasan durasi. Konsultasi dapat dilakukan secara
+                                    private, offline maupun online melalui Zoom atau WhatsApp.
+                                </div>
+
+                            </details>
+
+                            <details class="group bg-white rounded-2xl border border-sky-100/60 shadow-sm">
+
+                                <summary
+                                    class="flex justify-between items-center p-6 cursor-pointer font-semibold text-lg list-none">
+
+                                    Apakah hasil asesmen STIFIn bisa berubah?
+
+                                    <span class="transition group-open:rotate-180">
+                                        ▼
+                                    </span>
+
+                                </summary>
+
+                                <div class="border-t border-sky-50 px-6 py-5 text-muted-foreground leading-relaxed">
+                                    Tidak. Hasil asesmen STIFIn bersifat tetap dan tidak
+                                    berubah.
+                                </div>
+
+                            </details>
+
+                            <details class="group bg-white rounded-2xl border border-sky-100/60 shadow-sm">
+
+                                <summary
+                                    class="flex justify-between items-center p-6 cursor-pointer font-semibold text-lg list-none">
+
+                                    Apakah data hasil asesmen aman?
+
+                                    <span class="transition group-open:rotate-180">
+                                        ▼
+                                    </span>
+
+                                </summary>
+
+                                <div class="border-t border-sky-50 px-6 py-5 text-muted-foreground leading-relaxed">
+                                    Semua data hasil asesmen dijamin aman, privasi terjamin, dan
+                                    rekaman fingerprint akan otomatis terhapus dari sistem
+                                    setelah hasil asesmen selesai.
+                                </div>
+
+                            </details>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section id="cta"
+                    class="py-20 md:py-28 bg-gradient-to-br from-sky-600 via-sky-500 to-sky-400 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2">
+                    </div>
+                    <div
+                        class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3">
+                    </div>
+                    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart w-12 h-12 text-white/80 mx-auto mb-6">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                            </path>
+                        </svg>
+                        <h2 class="text-white mb-6 text-4xl font-bold">Siap Membangun Pernikahan <br> yang Lebih <span
+                                class="text-sky-100">Harmonis</span>?</h2>
+                        <p class="text-xl text-sky-100 mb-10 max-w-2xl mx-auto">Jangan tunggu konflik menumpuk. Mulai
+                            pahami diri dan pasangan Anda sekarang dengan asesmen STIFIn.</p>
+                        <div class="flex justify-center mb-12">
+                            <button
+                                class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 lg:px-10 lg:py-5 text-base lg:text-lg font-bold text-sky-600 shadow-xl transition-all duration-300 ease-out hover:scale-105 hover:bg-sky-50 hover:shadow-2xl active:scale-95 cursor-pointer">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="w-5 h-5">
+                                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                                </svg>
+
+                                Daftar via WhatsApp
+                            </button>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-6 text-sky-100 text-sm"><span
+                                class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-4 h-4">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>Respon dalam 1x24 jam</span><span class="flex items-center gap-2"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-map-pin w-4 h-4">
+                                    <path
+                                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                    </path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>Tersedia online &amp; offline</span><span class="flex items-center gap-2"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-heart w-4 h-4">
+                                    <path
+                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                    </path>
+                                </svg>Konsultasi gratis awal</span></div>
+                    </div>
+                </section>
+                <footer class="bg-sky-950 text-sky-200 py-12">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-4">Nikah Cerdas</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed">Layanan asesmen STIFIn khusus untuk
+                                    pasangan pernikahan. Membantu Anda dan pasangan saling memahami karakter fitrah
+                                    untuk membangun hubungan yang harmonis.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-4">Navigasi</h4>
+                                <ul class="space-y-2 text-sm text-gray-300">
+                                    <li><a href="#tentang"
+                                            class="hover:text-white transition-colors duration-200 cursor-pointer">Tentang
+                                            STIFIn</a></li>
+                                    <li><a href="#manfaat"
+                                            class="hover:text-white transition-colors duration-200 cursor-pointer">Manfaat</a>
+                                    </li>
+                                    <li><a href="#cara-kerja"
+                                            class="hover:text-white transition-colors duration-200 cursor-pointer">Cara
+                                            Kerja</a></li>
+                                    <li><a href="#testimoni"
+                                            class="hover:text-white transition-colors duration-200 cursor-pointer">Testimoni</a>
+                                    </li>
+                                    <li><a href="#timkami"
+                                            class="hover:text-white transition-colors duration-200 cursor-pointer">Tim Kami</a>
+                                    </li>
+                                    <li><a href="#faq"
+                                            class="hover:text-white transition-colors duration-200 cursor-pointer">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-4">Kontak</h4>
+                                <p class="text-sm font-semibold mb-3 text-gray-300">STIFIn Brain Solo</p>
+                                <ul class="space-y-3 text-sm text-gray-300">
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-message-circle w-4 h-4">
+                                            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                                        </svg><span>WhatsApp: 0857-1619-1979</span></li>
+                                    <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-map-pin w-4 h-4 mt-0.5 flex-shrink-0">
+                                            <path
+                                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                            </path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg><span>Perum. Indra Indah, Jl. Brotoseno 38, Bolon, Colomadu,
+                                            Karanganyar</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-t border-sky-900 mt-8 pt-8 text-center text-sm text-white">
+                            <p>© 2024 Nikah Cerdas — STIFIn Brain Solo. Hak cipta dilindungi.</p>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <script src="https://public-frontend-cos.metadl.com/commonfile/appPlugins-atoms-prod-1782378832998.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div id="mgx-shadow-host"></div>
+
+</body>
+
+</html>
